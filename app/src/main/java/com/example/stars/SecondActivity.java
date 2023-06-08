@@ -1,5 +1,6 @@
 package com.example.stars;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +16,8 @@ public class SecondActivity extends AppCompatActivity {
         String[] text = getResources().getStringArray(R.array.text);
         TextView txt = findViewById(R.id.txt);
         ImageView image = findViewById(R.id.image);
+        int id = Integer.parseInt(getIntent().getExtras().getString("position"));
+        txt.setText(text[id]);
 
 
     }
