@@ -15,10 +15,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.second_activity);
         String[] text = getResources().getStringArray(R.array.text);
         TextView txt = findViewById(R.id.txt);
-        ImageView image = findViewById(R.id.image);
-        int id = Integer.parseInt(getIntent().getExtras().getString("position"));
+        int id = getIntent().getExtras().getInt("position");
         txt.setText(text[id]);
-
-
     }
 }
